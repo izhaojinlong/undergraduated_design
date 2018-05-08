@@ -11,8 +11,8 @@ class BaseSetting(object):
     use_bootswatch = True
 
 class GlobalSetting(object):
-    site_title = "慕学后台管理系统"
-    site_footer = "慕学在线网"
+    site_title = "MOOC后台管理系统"
+    site_footer = "MOOC"
     menu_style = "accordion"
 
 
