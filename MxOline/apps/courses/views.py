@@ -109,7 +109,6 @@ class CourseInfoView(LoginRequiredMixin, View):
 class CommentsView(LoginRequiredMixin, View):
     def get(self, request, course_id):
         course = Course.objects.get(id=int(course_id))
-
         user_courses = UserCourse.objects.filter(course=course)
         user_ids = [user_course.user.id for user_course in user_courses]
         all_user_courses = UserCourse.objects.filter(user_id__in=user_ids)
@@ -121,6 +120,7 @@ class CommentsView(LoginRequiredMixin, View):
         all_resource = CourseResource.objects.filter(course=course)
         #all_comments = CourseComments.objects.all()
         all_comments = CourseComments.objects.filter(course=course)
+
         return render(request, "course-comment.html", {
             'course': course,
             'course_resources': all_resource,

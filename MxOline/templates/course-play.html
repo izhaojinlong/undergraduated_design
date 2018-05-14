@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}{{ video.name }}-慕学在线网{% endblock %}
+{% block title %}{{ video.name }}视频播放-MOOC{% endblock %}
 {% load staticfiles %}
 {% block custom_bread %}
     <section>
@@ -38,7 +38,7 @@
 
 {% block content %}
        <div id="main">
-           <div style="width:950px;height:515px; margin:0 auto;">
+           <div style="width:950px;height:550px; margin-left: 340px;">
     <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="900"
            poster="http://video-js.zencoder.com/oceans-clip.png"
            data-setup="{}">
